@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Faiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Faiz</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <section class="section">
+    <h2>My Projects</h2>
+    <p>Here are some of my featured academic and independent projects that reflect my learning journey and technical skill set.</p>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <h3>NutriTrack</h3>
+        <p>A full-stack fitness tracking app built using the <strong>MERN stack (MongoDB, Express, React, Node.js)</strong>. Designed to help users monitor meals and workouts efficiently.</p>
+        <p><strong>Timeline:</strong> Jan 2025 – May 2025 | <strong>Score:</strong> 20/20</p>
+        <a href="https://github.com/faiz-muhtasim/CSE470-Project" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Digital Restaurant Menu</h3>
+        <p>A web-based restaurant ordering system using <strong>PHP</strong> and <strong>MySQL</strong>. Streamlined digital menu interaction for modern dining experiences.</p>
+        <p><strong>Timeline:</strong> Oct 2024 – Jan 2025 | <strong>Score:</strong> 20/20</p>
+        <a href="https://github.com/faiz-muhtasim/CSE370-final-project" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Tank Strike: Line of Fire</h3>
+        <p>A two-player 3D tank combat game built in <strong>Python (OpenGL)</strong>. Focused on graphics rendering, collision detection, and multiplayer interaction.</p>
+        <p><strong>Timeline:</strong> Oct 2024 – Jan 2025 | <strong>Score:</strong> 15/15</p>
+        <a href="https://github.com/faiz-muhtasim/CSE423-Project" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Space-Shooter Game</h3>
+        <p>A classic arcade-style shooter made with <strong>Python OpenGL</strong>, using only midpoint line and circle drawing algorithms for graphics rendering.</p>
+        <p><strong>Timeline:</strong> Oct 2024 – Nov 2024 | <strong>Score:</strong> 10/10</p>
+        <a href="https://github.com/faiz-muhtasim/423-lab-/blob/main/22101528_Faiz%20Muhtasim_02.py" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Taskmaster (Full-Stack Flask To-Do App)</h3>
+        <p>A productivity-focused <strong>Flask</strong> application that lets users generate and manage to-do lists dynamically, using <strong>SQLite</strong> as the database.</p>
+        <a href="https://github.com/faiz-muhtasim/first-flask-task-master" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Classic Snake Game</h3>
+        <p>The nostalgic Snake game recreated with <strong>Python Turtle Graphics</strong>. A fun project emphasizing logic, loops, and event-driven programming.</p>
+        <a href="https://github.com/faiz-muhtasim/snake-game" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Faiz. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+
+  <style>
+    .section {
+        text-align: center;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark-mode .project-card {
+      background-color: #1a1a1a;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .project-card p {
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #088579;
+    }
+  </style>
+</body>
+</html>

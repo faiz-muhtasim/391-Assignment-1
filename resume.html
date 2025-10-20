@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Faiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="res.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Faiz</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Resume Section -->
+  <section class="section" id="resume">
+    <h2>My Resume</h2>
+    <p>You can view or download my resume using the buttons below.</p>
+
+    <div class="resume-buttons">
+      <a href="resume/Faiz_Resume.pdf" target="_blank" class="btn">📄 View Resume</a>
+      <a href="resume/Faiz_Resume.pdf" download class="btn">⬇️ Download Resume</a>
+    </div>
+
+    <!-- Embedded PDF Preview -->
+    <div class="resume-preview">
+      <iframe src="resume/Faiz_Resume.pdf" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Faiz. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
