@@ -32,7 +32,7 @@
 
  <!-- Tech Overview Section -->
   <section class="tech-overview">
-    <h2>Tech I Work With</h2>
+    <h2 style="font-style: italic;">Hire me for</h2>
     <div class="tech-cards">
       <div class="card">
         <img src="images/mern.png" alt="MERN Stack Logo" />
@@ -60,6 +60,7 @@
   <!-- Footer -->
   <footer>
     <p>© 2025 Faiz. All rights reserved.</p>
+    <p id="footer-info"></p>
   </footer>
 
   <script>
@@ -69,6 +70,18 @@
       body.classList.toggle('dark-mode');
       toggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
+
+    // Get current page location and last modification date
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const lastModified = new Date(document.lastModified);
+    const formattedDate = lastModified.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    const formattedTime = lastModified.toLocaleTimeString('en-US');
+
+    document.getElementById('footer-info').textContent = `Page: ${currentPage} | Last Updated: ${formattedDate} at ${formattedTime}`;
   </script>
 </body>
 </html>
