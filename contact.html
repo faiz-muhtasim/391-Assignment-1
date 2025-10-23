@@ -74,10 +74,10 @@
   <!-- Footer -->
   <footer>
     <p>© 2025 Faiz. All rights reserved.</p>
+    <p id="footer-info"></p>
   </footer>
 
   <script>
-    // Theme toggle
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
     toggle.addEventListener('click', () => {
@@ -85,16 +85,17 @@
       toggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
 
-    // Display email or phone number
-    function showEmail(event) {
-      event.preventDefault();
-      document.getElementById('info-display').textContent = '📧 faizmuhtasim438@gmail.com';
-    }
+    // Get current page location and last modification date
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const lastModified = new Date(document.lastModified);
+    const formattedDate = lastModified.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    const formattedTime = lastModified.toLocaleTimeString('en-US');
 
-    function showPhone(event) {
-      event.preventDefault();
-      document.getElementById('info-display').textContent = '📞 +880 1715 234932';
-    }
+    document.getElementById('footer-info').textContent = `Page: ${currentPage} | Last Updated: ${formattedDate} at ${formattedTime}`;
   </script>
 </body>
 </html>
