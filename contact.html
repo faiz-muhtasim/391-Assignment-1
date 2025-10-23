@@ -96,6 +96,34 @@
     const formattedTime = lastModified.toLocaleTimeString('en-US');
 
     document.getElementById('footer-info').textContent = `Page: ${currentPage} | Last Updated: ${formattedDate} at ${formattedTime}`;
+      function showPhone(event) {
+      event.preventDefault();
+      const phoneNumber = '+880 1715 234932'; // Replace with your actual phone number
+      const infoDisplay = document.getElementById('info-display');
+      
+      infoDisplay.textContent = `📱 Phone: ${phoneNumber}`;
+      infoDisplay.classList.add('show');
+      infoDisplay.classList.remove('copy-feedback');
+      
+      // Add click to copy functionality
+      infoDisplay.style.cursor = 'pointer';
+      infoDisplay.onclick = () => copyToClipboard(phoneNumber, 'Phone number');
+    }
+
+    // ✅ Show Email Function
+    function showEmail(event) {
+      event.preventDefault();
+      const email = 'faizmuhtasim438@gmail.com'; // Replace with your actual email
+      const infoDisplay = document.getElementById('info-display');
+      
+      infoDisplay.textContent = `📧 Email: ${email}`;
+      infoDisplay.classList.add('show');
+      infoDisplay.classList.remove('copy-feedback');
+      
+      // Add click to copy functionality
+      infoDisplay.style.cursor = 'pointer';
+      infoDisplay.onclick = () => copyToClipboard(email, 'Email');
+    }
   </script>
 </body>
 </html>
